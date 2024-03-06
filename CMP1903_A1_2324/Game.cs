@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Game
-    {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+    public class Game{
+        
+        private Die[] dice;
+        private int num_Dice;
 
-        //Methods
-
+        public Game(int num_Dice){
+            
+            this.num_Dice = num_Dice;
+            dice = new Die[num_Dice]; //Sets dice equal to total num of die set
+            for (int x = 0; x < num_Dice; x++) //loops rolling dice for the specified number of times{
+            
+                dice[x] = new Die(); //Creates the dice objects
+        }
     }
 }
